@@ -36,13 +36,13 @@ const LoginComponent = () => {
   return (
     <View style={styles.container} className=" flex  flex-1  items-center">
       <View>
-        <Text className="text-5xl font-bold ">TutorTrek</Text>
+        <Text style={styles.logoText}>TutorTrek</Text>
       </View>
 
       <TextInput
         style={styles.input}
         placeholder="Email"
-        className="mt-28"
+        className="mt-12"
         value={email}
         onChangeText={handleEmailChange}
       />
@@ -69,7 +69,7 @@ const LoginComponent = () => {
             Don't have an account?
           </Text>
           <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-            <Text className="font-bold ml-4"> Create new </Text>
+            <Text style={styles.createText}> Create new </Text>
           </TouchableOpacity>
         </View>
 
@@ -85,6 +85,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  logoText:{
+    fontSize:45,
+    fontWeight:'bold',
+    color:'black'
   },
   input: {
     width: "80%",
@@ -124,4 +129,10 @@ const styles = StyleSheet.create({
     marginTop: 16,
     color: "red",
   },
+  createText:{
+    marginLeft:4,
+    fontSize:16,
+    fontWeight:'bold',
+    color:'black'
+  }
 });

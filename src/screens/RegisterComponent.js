@@ -40,7 +40,7 @@ const RegisterComponent = () => {
   return (
     <View style={styles.container} className="flex flex-1  items-center">
       <View>
-        <Text className="text-5xl  font-semibold">TutorTrek</Text>
+        <Text style={styles.logoText}>TutorTrek</Text>
       </View>
       <TextInput
         style={styles.input}
@@ -73,7 +73,7 @@ const RegisterComponent = () => {
           Already have an account?
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text className="font-semibold ml-4"> Login</Text>
+          <Text style={styles.loginText}> Login</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -88,6 +88,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logoText:{
+    fontSize:45,
+    fontWeight:'bold',
+    color:'black'
   },
   input: {
     width: "80%",
@@ -120,4 +125,10 @@ const styles = StyleSheet.create({
     marginTop: 16,
     color: 'red',
   },
+  loginText:{
+    marginLeft:4,
+    fontSize:16,
+    fontWeight:'bold',
+    color:'black'
+  }
 });
